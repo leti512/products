@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Colores para la terminal
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+RED='\033[0;31m'
+NC='\033[0m'
+
+echo "${BLUE}🚀 Ejecutando validaciones antes de subir (NestJS)...${NC}"
+
+# Validar compilación
+echo "${BLUE}🏗️  Validando Build...${NC}"
+pnpm run build || { echo "${RED}❌ El Build falló. No se puede subir código que no compila.${NC}"; exit 1; }
+
+echo "${GREEN}✅ ¡Todo correcto! Proyecto compilado. Enviando a GitHub...${NC}"
