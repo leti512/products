@@ -1,0 +1,31 @@
+/** @type {import('czg').UserConfig} */
+export default {
+  messages: {
+    type: "Selecciona el tipo de cambio:",
+    subject: "Escribe una descripción corta:\n",
+    confirmCommit: "¿Confirmar el commit?",
+  },
+  types: [
+    { value: "FEAT", name: "✨ - Nueva funcionalidad", emoji: "✨" },
+    { value: "FIX", name: "🐛 - Corrección de bug", emoji: "🐛" },
+    { value: "DOCS", name: "📝 - Documentación", emoji: "📝" },
+    { value: "STYLE", name: "💄 - Estilos / formato", emoji: "💄" },
+    { value: "REFACTOR", name: "♻️ - Refactorización", emoji: "♻️" },
+    { value: "PERF", name: "⚡ - Mejora de rendimiento", emoji: "⚡" },
+    { value: "TEST", name: "✅ - Tests", emoji: "✅" },
+    { value: "CHORE", name: "🔧 - Tareas de build / config", emoji: "🔧" },
+    { value: "REVERT", name: "⏪ - Revertir commit", emoji: "⏪" },
+    { value: "WIP", name: "🚧 - Trabajo en progreso", emoji: "🚧" },
+    { value: "CLEANUP", name: "🗑️ - Eliminación de código sin uso", emoji: "🗑️" },
+    { value: "COPY", name: "✏️ - Cambio de textos", emoji: "✏️" },
+    { value: "CONFIG", name: "⚙️ - Configuraciones", emoji: "⚙️" },
+    { value: "CI", name: "👷 - Integración continua (CI)", emoji: "👷" },
+    { value: "DEPLOY", name: "🚀 - Deploy", emoji: "🚀" },
+  ],
+  useEmoji: true,
+  emojiAlign: "center",
+  upperCaseSubject: true,
+  skipQuestions: ["scope", "body", "breaking", "footer", "footerPrefix", "confirmCommit"],
+  subjectLimit: 100,
+  formatMessageCB: ({ emoji, type, subject }) => `${emoji} ${type}: ${subject}`,
+};

@@ -1,0 +1,3 @@
+#!/bin/sh
+exec < /dev/tty
+npx czg --hook "$1" --config=cz.config.mjs
