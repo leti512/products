@@ -10,6 +10,6 @@ echo "${BLUE}🚀 Ejecutando validaciones antes de subir (NestJS)...${NC}"
 
 # Validar compilación
 echo "${BLUE}🏗️  Validando Build...${NC}"
-pnpm run build || { echo "${RED}❌ El Build falló. No se puede subir código que no compila.${NC}"; exit 1; }
+npm run build || { echo "${RED}❌ El Build falló. No se puede subir código que no compila.${NC}"; exit 1; }
 
 echo "${GREEN}✅ ¡Todo correcto! Proyecto compilado. Enviando a GitHub...${NC}"
